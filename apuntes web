@@ -1,0 +1,19 @@
+OVERLAY es una capa de codigo que se superpone a toda la pagina el cual yo hice para imprimir un gif de carga :)
+
+El efecto overlay en una página web es una capa transparente que se coloca sobre la página web para mostrar contenido adicional. Esto se usa comúnmente para mostrar ventanas emergentes, diálogos, formularios de contacto, etc. El efecto overlay también se conoce como "ventana modal" o "ventana flotante". El código JavaScript para crear un efecto overlay es el siguiente: 
+
+// Crear el elemento div 
+var overlay = document.createElement('div'); 
+overlay.id = 'overlay'; 
+document.body.appendChild(overlay); 
+
+// Establecer la posición y el ancho del elemento div 
+overlay.style.position = 'fixed'; 
+overlay.style.top = 0; 
+overlay.style.left = 0; 
+overlay.style.width = '100%'; 
+overlay.style.height = '100%'; 
+
+// Establecer la opacidad del elemento div a 0,5 (50%)  
+overlay.style.opacity = 0.5;  
+overlay.style['background-color'] = '#000';

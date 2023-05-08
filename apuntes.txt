@@ -1,0 +1,19 @@
+//
+Preconnect es un atributo de la etiqueta <link> en HTML que le indica al navegador que establezca una conexión a un recurso externo antes de intentar descargarlo. Esto permite al navegador realizar la conexión de forma más rápida, lo que mejora el tiempo de carga de la página.
+example:
+<link rel="preconnect" href="https://fonts.googleapis.com">
+//
+
+//
+La declaración :root en CSS se utiliza para hacer referencia al elemento raíz de un documento HTML. Esto significa que todas las reglas dentro de la declaración :root se aplicarán al elemento raíz del documento, que es el elemento <html> en la mayoría de los casos. Esta declaración es útil para definir variables globales que pueden ser usadas en todo el documento. Por ejemplo, se puede usar para definir colores o tamaños globales que se pueden reutilizar a lo largo del documento.
+
+//
+// que quiere decir color:inherit en css::
+
+En CSS, el valor de la propiedad color:inherit significa que el elemento heredará el color de su elemento padre. Esto significa que si el elemento padre tiene un color específico definido, entonces este elemento también tendrá ese mismo color.
+
+//viewport height
+The code sets the height of an element to 100% of the viewport height. This means that the element will take up the entire height of the browser window.
+
+// pointer-events
+The code pointer-events: none; is used to disable mouse events on an element. This means that any mouse events, such as clicking, hovering, or dragging, will not be triggered on the element. This can be useful for disabling certain elements on a page or preventing users from interacting with them.

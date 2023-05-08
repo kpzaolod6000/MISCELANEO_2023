@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="app" data-app></div>
+    <script type="text/javascript">
+
+        // function downloadUser(cantidad) {
+        //     return new Promise((resolve,reject)=>{
+        //         //pasar la cantida a la api
+        //         const api = `https://randomuser.me./api/?results=${cantidad}&nat=us`;
+                
+        //         //llamada a ajax
+        //         const xhr = new XMLHttpRequest();
+                
+        //         //abrir la conexion
+        //         xhr.open('GET',api,true);
+
+        //         //on.load
+        //         xhr.onload = () => {
+        //             if (xhr.status === 200) {
+        //                 resolve(JSON.parse(xhr.responseText).results);
+        //             }else{
+        //                 reject(Error(xhr.statusText));
+        //             }
+        //         }
+
+        //         // opcional (on error)
+        //         xhr.onerror = (error) => reject(error);
+
+        //         //send
+        //         xhr.send()
+
+        //     })
+        // }
+
+        const downloadUser = (cantidad) => new Promise((resolve,reject) => {
+            //pasar la cantida a la api
+            const api = `https://randomuser.me./api/?results=${cantidad}&nat=us`;
+            
+            //llamada a ajax
+            const xhr = new XMLHttpRequest();
+            
+            //abrir la conexion
+            xhr.open('GET',api,true);
+
+            //on.load
+            xhr.onload = () => {
+                if (xhr.status === 200) {
+                    resolve(JSON.parse(xhr.responseText).results);
+                }else{
+                    reject(Error(xhr.statusText));
+                }
+            }
+
+            // opcional (on error)
+            xhr.onerror = (error) => reject(error);
+
+            //send
+            xhr.send()
+        });
+
+        downloadUser(20).then((person) => {
+            console.log(person);
+        }).catch((err) => {
+            console.log(err);
+        });
+
+        downloadUser(20).then(
+            person => printHTML(person),
+            error => console.error(
+                new Error('Hubo un error' + error)
+            )).catch((err) => {
+                console.log(err);
+            });
+
+        function printHTML(users){
+            let html = '';
+            users.forEach(element => {
+                html += `
+                    <li>
+                        Nombre: ${element.name.first} ${element.name.last}
+                        Pais: ${element.nat}
+                        Imagen:
+                            <img src = "${element.picture.medium}">
+                    </li>
+                `
+                console.log(element);
+            });
+
+            const contentApp = document.querySelector('[data-app]');
+            contentApp.innerHTML = html;
+        }
+
+
+
+    </script>
+    
+</body>
+</html>

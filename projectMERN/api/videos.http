@@ -1,0 +1,25 @@
+@url = http://localhost:5000
+
+GET {{url}}/videos
+###
+GET {{url}}/videos/6431a5a02cb800c0e8a23944
+###
+POST {{url}}/videos
+Content-Type: application/json
+
+{
+    "url": "https://www.youtube.com/watch?v=cyvENT2H0V4&list=RDyoG5y_9lMaw&index=3",
+    "title": "fast",
+    "description": "music"
+}
+
+###
+DELETE {{url}}/videos/6431a5a02cb800c0e8a23944
+###
+PUT {{url}}/videos/6431a5a02cb800c0e8a23944
+Content-Type: application/json
+
+{
+    "title": "fast"
+}
+
