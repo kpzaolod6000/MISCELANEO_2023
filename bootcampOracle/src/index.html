@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../assets/imgs/Vector.svg" type="image/svg">
+    <link rel="stylesheet" href="index.css">
+    <title>Encriptador</title>
+</head>
+<body>
+    <main class="main">
+        <img src="../assets/imgs/Vector.svg" alt="logo.png">
+        <div class="left">
+            <div class="l-container">
+                <form class="form">
+                    <textarea name="text" id="l-text" class="l-text" placeholder="Ingrese el texto aqui"></textarea>
+                    <div class="l-warning">
+                        <div class="l-w-text">
+                            <img src="../assets/imgs/exclamation-circle-fill.svg" alt="admiration signal">
+                            <p>Solo letras minúsculas y sin acentos</p>
+                        </div>
+                        <div class="l-w-buttons">
+                            <button type = "submit" id = "l-cypher" class="l-cypher" >Encriptar</button>
+                            <button type = "submit" id = "l-decypher" class="l-decypher" >Desencriptar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            
+        </div>
+        <div class="right">
+            <img class="r-munheco" src="../assets/imgs/Muñeco.svg" alt="image">
+            <div class="r-message">
+                <h1>Ningún mensaje fue encontrado</h1>
+                <h2>Ingrese el texto que desees encriptar o desencriptar</h2>
+            </div>
+        </div>
+        <a class="copyText-active" onclick="copyToClipboard()"><img src="../assets/imgs/copyButton.svg" alt="copy.svg"></a>
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>
