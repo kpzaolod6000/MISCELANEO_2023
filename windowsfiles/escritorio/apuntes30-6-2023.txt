@@ -1,0 +1,8 @@
+cruzamiento PBX
+
+crear una matriz a partir de la matriz establecida
+
+precision y recall
+
+MAXIMIZAR LA FUNCION FITTNES
+clonalg
