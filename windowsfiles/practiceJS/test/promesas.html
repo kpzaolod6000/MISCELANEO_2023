@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    const promesa = new Promise((resolve, reject)=>{
+        setTimeout(resolve, 100, '*');
+    });
+
+    /*promesa.then(unAsterisco=>{
+        console.log(unAsterisco);
+        return unAsterisco + '*'
+    });
+    promesa.then(dosAsteriscos=>{
+        console.log(dosAsteriscos);
+        return dosAsteriscos + '*'
+    });
+    promesa.then(tresAsteriscos=>{
+        console.log(tresAsteriscos);
+    });
+    promesa.catch(error=>{
+        console.log(error);
+    });
+    // result: *
+              * 
+              *
+    */
+
+    // other example
+    // promesa.then(unAsterisco=>{
+    //     console.log(unAsterisco);
+    //     return promesa + '*'
+    // }).then(dosAsteriscos=>{
+    //     console.log(dosAsteriscos);
+    //     return promesa + '*'
+    // }).then(tresAsteriscos=>{
+    //     console.log(tresAsteriscos);
+    // }).catch(error=>{
+    //     console.log(error);
+    // })
+    
+    // // result: *
+    //         // [object Promise]*
+    //         // [object Promise]*
+       
+    // other example
+
+    // promesa.then(unAsterisco=>{
+    //     console.log(unAsterisco);
+    //     return promesa + '*'
+    // });
+    // promesa.then(dosAsteriscos=>{
+    //     console.log(dosAsteriscos);
+    //     return promesa + '*'
+    // });
+    // promesa.then(tresAsteriscos=>{
+    //     console.log(tresAsteriscos);
+    // });
+    // promesa.catch(error=>{
+    //     console.log(error);
+    // });
+    
+    // // // result: *
+    // //         // *
+    // //         // *
+    
+    //other examples
+    // promesa.then(unAsterisco=>{
+    //     console.log(unAsterisco);
+    //     return unAsterisco + '*'
+    // }).then(dosAsteriscos=>{
+    //     console.log(dosAsteriscos);
+    //     return dosAsteriscos + '*'
+    // }).then(tresAsteriscos=>{
+    //     console.log(tresAsteriscos);
+    // }).catch(error=>{
+    //     console.log(error);
+    // })
+    // // result: *
+    //         // **
+    //         // ***
+    
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,364 @@
+controllers\PatientController.php
+    public function actionShowModalPatient($com_typeSales)
+    public function actionShowModalPatient($com_typeSales='')
+
+
+controllers\SalesController.php
+use app\models\PatientSearchNew;
+    /*==============================================
+    =            Section new code block            =
+    ==============================================*/
+    public function actionCreate()
+    {
+        $model = new Sales();
+
+        $modelSearch = new PatientSearchNew();
+        $dataProvider = $modelSearch->search(Yii::$app->request->queryParams);
+        
+        if (Yii::$app->session->has('info-patient')){
+            print_r("existe una variable en la sesion");
+            Yii::$app->session->remove('info-patient');
+        }
+
+        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            return $this->redirect(['view', 'id' => $model->id]);
+        }
+
+        return $this->render('create', [
+            'model' => $model,
+            'modelSearch' => $modelSearch,
+            'dataProvider' => $dataProvider,
+        ]);
+    }        
+    /*=====  End of Section new code block  ======*/
+
+    /*==============================================
+    =            Section old code block            =
+    ==============================================*/
+    // public function actionCreate()
+    // {
+    //     $model = new Sales();
+
+    //     $modelSearch = new PatientSearch();
+    //     $dataProvider = $modelSearch->search(Yii::$app->request->queryParams);
+
+    //     if (Yii::$app->session->has('info-patient')){
+    //         print_r("existe una variable en la sesion");
+    //         Yii::$app->session->remove('info-patient');
+    //     }
+
+    //     if ($model->load(Yii::$app->request->post()) && $model->save()) {
+    //         return $this->redirect(['view', 'id' => $model->id]);
+    //     }
+
+    //     return $this->render('create', [
+    //         'model' => $model,
+    //         'modelSearch' => $modelSearch,
+    //         'dataProvider' => $dataProvider,
+    //     ]);
+    // }    
+    /*=====  End of Section old code block  ======*/
+    
+models\PatientSearchNew.php
+
+    <?php
+
+    namespace app\models;
+
+    use yii\base\Model;
+    use yii\data\ActiveDataProvider;
+    use app\models\Patient;
+    use yii\db\Query;
+    use Yii;    
+
+
+    /**
+    * PatientSearch represents the model behind the search form of `app\models\Patient`.
+    */
+    class PatientSearchNew extends Model
+    {
+        public $id,$type_doc,$nro_doc,$name, $last_name, $last_name_m,$gender;
+        /**
+        * {@inheritdoc}
+        */
+        public function rules()
+        {
+            return [
+                [['id', 'nro_doc'], 'integer'],
+                [['type_doc', 'name', 'last_name', 'last_name_m', 'gender'], 'safe'],
+            ];
+        }
+
+        /**
+        * {@inheritdoc}
+        */
+        public function scenarios()
+        {
+            // bypass scenarios() implementation in the parent class
+            return Model::scenarios();
+        }
+        public function search($params)
+        {
+            $query = new Query();
+
+            // add conditions that should always apply here
+
+            $dataProvider = new ActiveDataProvider([
+                //'query' => $query,
+                'query' => $query->select(['id','type_doc','name_doc','nro_doc','name', 'last_name', 'last_name_m', 'gender'])
+                ->from(['patient_params_view']),
+                //'pagination' => [ 'pageSize' => 20 ],
+                'pagination' => ['pageSize' => 20],
+            ]);
+
+
+            $this->load($params);
+
+            if (!$this->validate()) {
+                // uncomment the following line if you do not want to return any records when validation fails
+                // $query->where('0=1');
+                return $dataProvider;
+            }
+
+            // grid filtering conditions
+            $query->andFilterWhere([
+                'id' => $this->id,
+                'nro_doc' => $this->nro_doc,
+                //'birht_date' => $this->birht_date,
+                //'created_by' => $this->created_by,
+                //'created' => $this->created,
+                //'modified_by' => $this->modified_by,
+                //'modified' => $this->modified,
+            ]);
+
+            $query->andFilterWhere(['like', 'type_doc', $this->type_doc])
+                ->andFilterWhere(['like', 'name', $this->name])
+                ->andFilterWhere(['like', 'last_name', $this->last_name])
+                ->andFilterWhere(['like', 'last_name_m', $this->last_name_m])
+                ->andFilterWhere(['like', 'gender', $this->gender]);
+                //->andFilterWhere(['like', 'clinic_history', $this->clinic_history]);
+
+            return $dataProvider;
+        }
+    }
+
+
+views\sales\create.php
+
+    <?= 
+        /*=================================================
+        =            Section updated ode block            =
+        =================================================*/
+        
+        
+         $this->render('searchPatientNew', [
+            'model' => $model,
+            'modelSearch' => $modelSearch,
+            'dataProvider' => $dataProvider,
+        ]) 
+        
+        /*=====  End of Section updated ode block  ======*/
+
+        /*==============================================
+        =            Section old code block            =
+        ==============================================*/
+        
+        // $this->render('_form', [
+        // 'model' => $model,
+        // 'modelSearch' => $modelSearch,
+        // 'dataProvider' => $dataProvider,    
+        // ])
+        /*=====  End of Section old code block  ======*/ 
+    ?>
+
+views\sales\searchPatientNew.php
+
+    <?php
+    use yii\helpers\Html;
+    use yii\bootstrap\Modal;
+    use yii\helpers\ArrayHelper;
+    use kartik\form\ActiveForm;
+    use yii\grid\GridView;
+    use kartik\builder\Form;
+
+
+    /* @var $this yii\web\View */
+    /* @var $model app\models\Sales */
+    /* @var $form yii\widgets\ActiveForm */
+    ?>
+    <div class='panel panel-primary' id="search_patients" name="search_patiens">
+        <div class="panel-heading">BUSCAR PACIENTES</div>
+            <div class="panel-body">
+                <div id='grid_SearchPatient'>    
+
+                    <?php $form = ActiveForm::begin(['id'=>'frm_form_search_patient']); 
+                                
+                        echo Form::widget([
+                        'model'=> $modelSearch,//change !!!
+                        //'formName'=>'DetailDisMedicineSearch',
+                        'form'=>$form,
+                        'columns'=>3,
+                        'attributes'=>[
+                            'last_name'  => [
+                                'label'  => 'Ap. paterno', 
+                                'type'   => Form::INPUT_TEXT,
+                                'options'=> ['placeholder'=>'Ingrese apellido paterno']
+                            ],
+                            'last_name_m'=> [
+                                'label'  => 'Ap. materno', 
+                                'type'   => Form::INPUT_TEXT,
+                                'options'=> ['placeholder'=>'Ingrese apellido materno']
+                            ],
+                            'name'       => [
+                                'label'  => 'Nombres', 
+                                'type'   => Form::INPUT_TEXT,
+                                'options'=> ['placeholder'=>'Ingrese nombres']  
+                            ],
+                            'type_doc'=>[
+                                'label'  => 'Tipo de documento', 
+                                'type'=>Form::INPUT_WIDGET, 
+                                'widgetClass'=>'\kartik\select2\Select2', 
+                                'options'=>[
+                                    'options'=>['placeholder' => 'Seleccione el Tipo de Documento'],
+                                    'data'=>['Tipo de Documento'=> app\models\Params::getTypeDoc()]
+                                ], 
+                            ],
+                            'nro_doc'    => [
+                                'label'  => 'Nro. de documento', 
+                                'type'   => Form::INPUT_TEXT,
+                                'options'=> ['placeholder'=>'Ingrese número de documento']
+                            ],
+                            /*'gender'     => [
+                                'label'  => 'Género', 
+                                'type'=>Form::INPUT_TEXT,
+                                'options'=> ['placeholder'=>'Ingrese género (M) o (F)']  
+                            ],*/
+                        ],
+                    ]);
+                        
+                    ?>
+
+
+
+                    <div class="form-group1" style = "margin-top:10px; display:flex; justify-content:flex-end;">
+                        <div style = "margin-right:10px;">
+                            <?= Html::button('Agregar', ['class' => 'btn btn-success','id'=>'showModalPatient']) ?>
+                            <?= Html::button('Buscar', ['class' => 'btn btn-success','id'=>'searchPatient']) ?>
+                            <?= Html::resetButton('Limpiar', ['class' => 'btn btn-default','value'=>'reset','name'=>'reset']) ?>
+                        </div>
+                    </div>
+                    <?php ActiveForm::end(); ?>
+                    <div id="grid_ListPatient">
+                    <?=Yii::$app->controller->renderPartial('gridPatient',
+                    [
+                        'dataProvider'=>$dataProvider,
+                    ])?>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    <?php
+    Modal::begin([
+        'header' => '<h3>Agregar Paciente</h3>',
+        'id'=>'patientModal',
+        'size'=>'modal-lg',
+    ]);
+
+    echo "<div id='modal_addpatient'></div>";
+        
+    Modal::end();
+    ?>
+
+    <?php
+    $urlSearchPatient=Yii::$app->urlManager->createUrl(['sales/search-patient-sales']);
+    $js=<<<EOT
+    $("#searchPatient").on('click',function(e){
+        //$("#showModalPatient").hide();//para esconder el button
+        e.preventDefault();
+        $.ajax({
+            url: '{$urlSearchPatient}',
+            global: false,
+            //type: "POST",
+            cache: false,
+            //dataType: 'json',
+            data:$("form#frm_form_search_patient").serialize(),
+            success:function(html){
+                $("#grid_ListPatient").html(html);
+                //$("#showModalPatient").hide();
+                //console.log("good");
+            }
+        });
+
+    });
+    EOT;
+    ?>
+    <?php
+    $urlModalPatient=Yii::$app->urlManager->createUrl(['patient/show-modal-patient']);
+    $js.=<<<EOT
+    $("#showModalPatient").on('click',function(e){
+        e.preventDefault();
+        $.ajax({
+            url: '{$urlModalPatient}',
+            global: false,
+            type: "POST",
+            cache: false,
+            dataType: 'json',
+            success:function(html){
+                if(html.status == 'ok'){
+                    $('#patientModal').modal('show');
+                    $("#modal_addpatient").html(html.msg);
+                    console.log("good");
+                }
+            }
+        });
+    });
+    EOT;
+    ?>
+    <?php
+    $js.=<<<EOT
+    $("#grid_SearchPatient").on('keydown',function(e){
+        if (e.key === "Enter") {
+            e.preventDefault();
+            $("#searchPatient").trigger( "click" );
+        }
+    });
+    EOT;
+    ?>
+    <?php
+    $js.=<<<EOT
+    $("#patientsearch-last_name_m").on('focusout',function(e){
+        $("#searchPatient").trigger( "click" );
+        
+    });
+    EOT;
+    ?> 
+    <?php
+    $js.=<<<EOT
+    $("#patientsearch-last_name_m").on('focusin',function(e){
+        $("#searchPatient").trigger( "click" );
+        
+    });
+    EOT;
+    ?> 
+    <?php
+    $js.=<<<EOT
+    $("#patientsearch-name").on('focusout',function(e){
+        $("#searchPatient").trigger( "click" );
+        
+    });
+    EOT;
+    ?>
+
+    <?php
+    $js.=<<<EOT
+    $("#patientsearch-type_doc").on('select2:select',function(e){
+        $("#searchPatient").trigger( "click" );
+        
+    });
+    EOT;
+    $this->registerJs(
+                $js,
+                yii\web\View::POS_READY,
+                'search_patient');
+    ?>
