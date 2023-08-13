@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+/**
+ * VARIABLES
+ * */
+:root{
+    
+    /**
+     * Background
+     */
+    --Very-dark-blue: hsl(233, 47%, 7%); /**(main background) */
+    --Dark-desaturated-blue : hsl(244, 38%, 16%); /**(card background) */
+    --Soft-violet : hsl(277, 64%, 61%); /**(accent)*/
+
+    /**
+     * Neutral
+     */
+    --White: hsl(0, 0%, 100%); /**(main heading, stats) */
+    --Slightly-transparent-white-main: hsla(0, 0%, 100%, 0.75); /**(main paragraph) */
+    --Slightly-transparent-white-stat: hsla(0, 0%, 100%, 0.6); /**(stat headings) */
+}
+
+*, *::after , *::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--Very-dark-blue);
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    color: var(--White);
+    height: 100vh;
+    width: 100%;
+}
+
+.card{
+    position: relative;
+    height: 450px;
+    width: 1100px;
+    margin: 120px;
+    background-color: var(--Dark-desaturated-blue);
+    border: none;
+    border-radius: 7px
+}
+
+/**
+ * LEFT
+ */
+
+.left{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(1100px/2);
+    height: 100%;    
+    padding: 58px 100px 58px 58px;
+}
+
+.left .l-concept{
+    margin-block-end: 50px;
+}
+
+.left .l-concept h1{
+    font-size: 2.3rem;
+    font-weight: 700;
+    margin-block-end: 2rem;
+}
+
+.left .l-concept span{
+    color: var(--Soft-violet);
+}
+
+.left .l-concept p {
+    color: var(--Slightly-transparent-white-main);
+    margin-bottom: 19px; 
+}
+
+.left .l-request {
+    width: 360px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.left .l-request .l-request-item h2{
+    margin-block-end: 8px;
+    font-size: 1.8rem;
+}
+
+.left .l-request .l-request-item h3{
+    text-transform: uppercase;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 1em;
+    color: var(--Slightly-transparent-white-stat);
+}
+
+
+/**
+ * RIGHT
+ */
+
+.right{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: calc(1100px/2);
+    background-color: var(--Soft-violet);
+}
+
+.right img{ 
+    height: 100%;
+    width: 100%;
+    mix-blend-mode: multiply;
+}
+
+/**
+ * RESPONSIVE
+*/
+
+@media (max-width: 375px){
+
+    .card{
+        border-radius: 10px;
+        height: 830px;
+        width: 326px;
+        margin: 25px;
+    }
+    
+    /**
+     * Left
+     */
+
+    .left{
+        top: 250px;
+        left: 0%;
+        width: 100%;
+        height: calc(830px - 250px);
+        padding-block: 40px;
+        padding-inline: 25px;
+    }
+
+    .left .l-concept{
+        text-align: center;
+    }
+
+    .left .l-concept h1{
+        font-size: 1.7rem;
+        margin-block-end: 1rem;
+    }
+
+    .left .l-concept p {
+        margin-bottom: 2px;
+    }
+    
+    .left .l-request {
+
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .left .l-request .l-request-item{
+        text-align: center;
+        margin-block-end: 15px;
+    }
+
+    /**
+     * Right
+     */
+    .right{
+        
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: calc(850px - 600px);
+        border-radius: 10px 10px 0 0;
+    }
+    
+}
