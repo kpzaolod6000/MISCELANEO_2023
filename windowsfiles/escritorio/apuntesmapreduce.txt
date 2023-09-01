@@ -1,0 +1,67 @@
+operaciones con operaciones paralelas
+
+Y lo que es más importante, proporcionamos una implementación
+tolerante a fallos que puede escalarse a miles de procesadores.
+indica que la mayoria solo mira dataset de menor tamaño
+ Una diferencia clave entre estos sistemas y
+
+
+MapReduce es que MapReduce explota un modelo de programación restringido para paralelizar el programa de 
+usuario automáticamente y proporcionar una tolerancia a fallos transparente.
+
+
+Bulk Synchronous Programming [17] and some MPI
+primitives [11] provide higher-level abstractions that make it easier for programmers to write parallel programs.
+
+
+Nuestra optimización de la localidad se inspira en técnicas como los discos activos [12, 15], en los que el cálculo se 
+desplaza a elementos de procesamiento que están cerca de los discos locales, para reducir la cantidad de datos que se 
+envían a través de la red. a los discos locales, para reducir la cantidad de datos enviados a través de subsistemas de E/S o la red.
+
+Funcionamos con procesadores procesadores a los que se conecta directamente un pequeño número de discos en lugar de funcionar
+ directamente en procesadores pero el planteamiento general es similar.
+
+Our backup task mechanism is similar to the eager scheduling mechanism employed in the Charlotte System [3].
+la desventaja es que si una tarea determinada provoca fallos repetidos, todo el cálculo no se completa. pero debido a ello con nuestro mecanismo 
+omiten estos registros erroneos
+
+the MapReduce implementation relies on an in-house
+cluster management system
+
+Aunque no es el tema central de este documento, el sistema de gestión de clústeres es similar en espíritu a otros sistemas como Condor
+
+La función de ordenación que forma parte de la biblioteca MapReduce es similar en funcionamiento a NOW-Sort [1].
+
+las máquinas fuente (map workers) dividen los datos que deben ordenarse y los envían a uno de los R reduce workers. 
+Cada trabajador reduce ordena sus datos localmente (en memoria si es posible). Por supuesto, NOW-Sort no tiene las 
+funciones Map y Reduce definibles por el usuario que hacen que nuestra biblioteca sea ampliamente aplicable.
+
+River [2] provides a programming model where processes communicate with each other by sending data
+over distributed queues
+
+
+
+el sistema River ofrece un buen rendimiento a pesar de que se tenga un hardware heterogéneo o perturbaciones del sistema
+
+he MapReduce framework is able
+to partition the problem into a large number of finegrained tasks. These tasks are dynamically scheduled
+on available workers so that faster workers process more
+tasks
+
+El modelo de programación restringida también nos permite
+programar ejecuciones redundantes de tareas cerca del
+final del trabajo, lo que reduce en gran medida el tiempo de finalización en
+en presencia de no uniformidades (como trabajadores lentos o atascados).
+trabajadores)
+
+
+BAD-FS [5] has a very different programming model from MapReduce, and unlike MapReduce, su objetivo es ejecutar trabajos a traves de una red de gran area
+
+(1) Ambos
+sistemas utilizan la ejecución redundante para
+pérdida de datos causada por fallos
+
+(2) Ambos utilizan para reducir la cantidad de datos enviados a través de enlaces de red congestionados.
+
+TACC [7] es un sistema diseñado para simplificar la construcción de servicios en red de alta disponibilidad. 
+Al igual que MapReduce, se basa en la reejecución como mecanismo para implementar la tolerancia a fallos.

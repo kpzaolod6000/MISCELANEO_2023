@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style type="text/css">
+        .target{
+            height: 100px;
+            width: 100px;
+           border: 3px solid black;
+        }
+
+        #the-draggable{
+            height: 90px;
+            width: 90px;
+            background-color: aqua;
+
+        }
+
+    </style>
+
+    <div class="target"></div><br>
+    <div class="target"></div><br>
+    <div class="target"></div><br>
+    <div class="target"></div><br>
+    <br>
+
+    <div id="the-draggable" draggable="true"></div>
+
+    <script type="text/javascript">
+
+        
+        const removeColor = (event) => {
+            event.currentTarget.style.background = "#FFFFFF";
+        }
+        
+        const allowsPositioning = (event) => {
+            event.preventDefault();
+            event.currentTarget.style.background = "#FFF9C4";
+        }
+
+        const startDrag = (event) => {
+            event.dataTransfer.setData("text", event.target.id);
+        }
+
+        const colocation = (event) =>{
+            event.preventDefault();
+            var data = event.dataTransfer.getData("text");
+            event.target.appendChild(document.getElementById(data));
+        }
+
+
+        const targets = document.getElementsByClassName("target");
+        document.getElementById("the-draggable").addEventListener("dragstart",startDrag);
+
+        for (let i = 0; i < targets.length; i++) {
+            targets[i].addEventListener('dragover',allowsPositioning);
+            targets[i].addEventListener('dragleave',removeColor);
+            targets[i].addEventListener('drop',colocation);            
+        }
+    </script>
+    
+</body>
+</html>

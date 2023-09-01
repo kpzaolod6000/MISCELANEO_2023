@@ -1,0 +1,14 @@
+programacion evolutiva (study)
+replicar codigo del paper (do)
+
+
+capitulo 2 metodos de clasificacion de texto, logica fuzzy, 
+capitulo 3 estado del arte
+capitulo 4 Propuesta
+capitulo 5 Conclusiones
+
+explanaible inteligencia artificial
+explanaible document clasification
+
+
+La idea sería replicar un método de clasificación multi etiqueta de documentos y adicionar la forma explicable de clasificación usando word clouds.

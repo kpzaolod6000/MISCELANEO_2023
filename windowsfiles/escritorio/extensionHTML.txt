@@ -1,0 +1,4 @@
+Prettier - Code formatter (identar las lineas de codigo) (ctrl+alt+f)
+Auto Rename Tag (auto nombrado de las etiquetas)
+open in browser (se hace anticlick al archivo para abrir el browser)
+Live Server (para crear paginas dinamicas el cual escuchan los cambios del archivo y reload la pagina)

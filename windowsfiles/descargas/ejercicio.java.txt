@@ -1,0 +1,19 @@
+class Coche{
+    int nro_puertas = 0;
+    void add_door(int p){
+        nro_puertas+=p;
+    }
+}
+
+class HelloWorld {
+    
+    public static int funcion(int a, int b, int c){
+        return a + b + c;
+    }
+    public static void main(String[] args) {
+        System.out.println(funcion(4,4,4));
+        Coche miCoche = new Coche();
+        miCoche.add_door(5);
+        System.out.println(miCoche.nro_puertas);
+    }
+}
