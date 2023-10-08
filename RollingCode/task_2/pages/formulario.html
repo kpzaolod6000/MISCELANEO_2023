@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/formulario.css" />
+    <link rel="icon" type="image/ico" href="../img/logo.avif" />
+
+    <title>Formulario</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <img src="../img/logo.png" alt="logo.png" />
+        <div class="text-nav">
+          <a href="../index.html">Inicio</a>
+          <a href="../pages/formulario.html">Formulario</a>
+          <a href="../pages/boxmodel.html">BoxModel</a>
+          <a href="../pages/position.html">Position</a>
+          <a href="../pages/tabla.html">Tabla</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <article class="container-main">
+        <section class="container-form">
+          <form>
+            <div class="form-group-user">
+                <div class="form-group input-group">
+                <label for="nombre" class="input-group-prepend">Usuario:</label>
+                <input
+                    type="text"
+                    id="nombre"
+                    class="form-control"
+                    placeholder="Escribe tu nombre"
+                />
+                </div>
+                <div class="form-group input-group">
+                <label for="password" class="input-group-prepend"
+                    >Contraseña:</label
+                >
+                <input
+                    type="password"
+                    id="password"
+                    class="form-control"
+                    placeholder="Contraseña"
+                />
+                </div>
+            </div>
+            <div class="form-group-email input-group">
+              <label for="email" class="input-group-email">Email:</label>
+              <input
+                type="email"
+                id="email"
+                class="form-control"
+                placeholder="Escribe tu correo electrónico"
+              />
+            </div>
+
+            <div class="form-group-gender-date">
+                <div class="form-group">
+                <label>Género:</label>
+                <div class="form-check">
+                    <input
+                    type="radio"
+                    id="genero-masculino"
+                    name="genero"
+                    class="form-check-input"
+                    />
+                    <label for="genero-masculino" class="form-check-label"
+                    >Masculino</label
+                    >
+                </div>
+                <div class="form-check">
+                    <input
+                    type="radio"
+                    id="genero-femenino"
+                    name="genero"
+                    class="form-check-input"
+                    />
+                    <label for="genero-femenino" class="form-check-label"
+                    >Femenino</label
+                    >
+                </div>
+                </div>
+                <div class="form-group-date input-group">
+                <label for="fecha-nacimiento" class="input-group-date"
+                    >Fecha de Nacimiento:</label
+                >
+                <input type="date" id="fecha-nacimiento" class="form-control" />
+                </div>
+            </div>
+
+            <div class="form-group-comment input-group">
+              <label for="comentario" class="input-group-prepend"
+                >Comentario:</label
+              >
+              <textarea
+                id="comentario"
+                class="form-control"
+                rows="4"
+                placeholder="Escribe tus comentarios"
+              ></textarea>
+            </div>
+            <div class="form-group">
+              <div class="form-check">
+                <input
+                  type="checkbox"
+                  id="acepto-terminos"
+                  class="form-check-input"
+                />
+                <label for="acepto-terminos" class="form-check-label"
+                  >Acepto los términos y condiciones</label
+                >
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+          </form>
+        </section>
+      </article>
+    </main>
+
+    <footer>
+      <div class="container-footer">
+        <div class="logo">
+          <img src="../img/logo.png" alt="logo.png" />
+        </div>
+        <div class="text-foo">
+          <a href="../index.html">Inicio</a>
+          <a href="../pages/formulario.html">Formulario</a>
+          <a href="../pages/boxmodel.html">BoxModel</a>
+          <a href="../pages/position.html">Position</a>
+          <a href="../pages/tabla.html">Tabla</a>
+        </div>
+        <div>
+          <p>
+            <span>&#169;</span>2021 Laptops. Todos los derechos reservados
+            <span>&#169;</span>by Kelvin Paul Pucho Zevallos
+          </p>
+        </div>
+      </div>
+      <div class="chat">
+        <img src="../img/chat.svg" alt="chat.svg" />
+      </div>
+    </footer>
+  </body>
+</html>

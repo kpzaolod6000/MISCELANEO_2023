@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/index.css" />
+    <title>Challenge 5</title>
+  </head>
+  <body>
+    <main>
+      <div class="container-form">
+        <h1><strong>Formulario de Ingreso</strong></h1>
+        <div class="form">
+          <div class="form-title">Datos del Usuario</div>
+          <div class="form-body">
+            <form>
+              <div class="c-names">
+                <div class="f-input f-name">
+                  <label for="lname">Apellido: </label>
+                  <input type="text" id="lname" name="lname" />
+                </div>
+
+                <div class="f-input f-name">
+                  <label for="fname">Nombre: </label>
+                  <input type="text" id="fname" name="fname" />
+                </div>
+              </div>
+
+              <div class="f-input">
+                <label for="country">Pais: </label>
+
+                <select name="country" id="country">
+                  <option value="Estados Unidos">Estados Unidos</option>
+                  <option value="Perú">Perú</option>
+                  <option value="Argentina">Argentina</option>
+                </select>
+              </div>
+
+              <div class="f-input">
+                <label for="gender">Genero: </label>
+                <div class="f-input r-gender">
+                  <div>
+                    <label for="m">Masculino</label>
+                    <input type="radio" id="m" name="gender" value="m" />
+                  </div>
+
+                  <div>
+                    <label for="f">Femenino</label>
+                    <input type="radio" id="f" name="gender" value="f" />
+                  </div>
+
+                  <div>
+                    <label for="o">Otro</label>
+                    <input type="radio" id="o" name="gender" value="o" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="f-input login">
+                <div class="l-user">
+                  <label for="uname">Usuario: </label>
+                  <input type="text" id="uname" name="uname" />
+                </div>
+                <br />
+                <div class="l-password">
+                  <label for="l-pass">Contraseña: </label>
+                  <input type="password" id="l-pass" name="l-pass" />
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-table">
+        <h1>Usuarios registrados</h1>
+        <div class="table">
+          <table>
+            <thead>
+              <tr>
+                <th>Apellido</th>
+                <th>Nombre</th>
+                <th>Pais</th>
+                <th>Genero</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Chibilisco</td>
+                <td>Alan</td>
+                <td>arg</td>
+                <td>M</td>
+              </tr>
+              <tr>
+                <td>Quiroga</td>
+                <td>Valentin</td>
+                <td>arg</td>
+                <td>M</td>
+              </tr>
+              <tr>
+                <td>Williams</td>
+                <td>Jhon</td>
+                <td>usa</td>
+                <td>M</td>
+              </tr>
+              <tr>
+                <td>Romanoff</td>
+                <td>Natasha</td>
+                <td>ru</td>
+                <td>F</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

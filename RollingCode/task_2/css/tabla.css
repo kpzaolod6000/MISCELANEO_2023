@@ -1,0 +1,170 @@
+/*
+============================
+Archivo de Estilos CSS
+============================
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+      
+  body {
+    font-family: Arial, sans-serif;
+    font-size: 16px
+    /* background-color: #a9a9a9; */
+  }
+  
+  /** HEADER */
+  nav{
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    z-index: 1;
+  }
+  
+  nav > img {
+    height: 60px;
+    margin-inline-start: 80px;
+  }
+  
+  nav >.text-nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: white;
+  }
+  
+  
+  .text-nav > a{
+    text-decoration: none;
+    color: white;
+    margin: 0px 30px;
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+  
+  .text-nav > a:hover{
+    text-decoration:underline;
+  }
+  
+  
+  /** MAIN */
+  
+main{
+    height: 100vh;
+    width: 100%;
+    background-image: url('../img/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    color: white;
+    text-align: center;
+    padding: 150px 0px;  
+  }
+  
+
+table {
+    width: 900px;
+    margin: 50px auto;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    border-collapse: collapse;
+}
+  
+table th {
+    background-color: #f2f2f2;
+    color: #333;
+    text-align: center;
+    padding: 10px;
+    border-bottom: 2px solid #ccc;
+}  
+
+table tbody tr:nth-child(even) {
+    background-color: #f5f5f5;
+}
+  
+table td {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    color: #555;
+}
+
+table tbody tr:hover {
+    background-color: #e0e0e0;
+}
+  
+  
+  /** FOOTER */
+  
+  footer {
+    height: 120px;
+    width: 100%;
+    padding-block-start: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 0.6rem;
+  }
+  
+  .container-footer {
+  
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    height: 100%;
+  }
+  
+  footer .text-foo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-block-end: 10px;
+  }
+  
+  
+  footer .text-foo > a{
+    text-decoration: none;
+    color: white;
+    margin-inline-end: 10px;
+    font-size: 0.7rem;  
+    font-weight: 600;
+  }
+  
+  footer .text-foo > a:hover{
+    text-decoration:underline;
+  }
+  
+  footer img {
+    height: 60px;
+  }
+  
+  .chat {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 80px;
+    height: 80px;
+    margin: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    background-color: #0ab5bb;
+  }
+  
+  .chat > img{
+    max-width: 70%;
+    max-height: 70%
+  }

@@ -1,0 +1,180 @@
+/*
+============================
+Archivo de Estilos CSS
+============================
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+      
+  body {
+    font-family: Arial, sans-serif;
+    font-size: 16px
+    /* background-color: #a9a9a9; */
+  }
+  
+  /** HEADER */
+  nav{
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    z-index: 1;
+  }
+  
+  nav > img {
+    height: 60px;
+    margin-inline-start: 80px;
+  }
+  
+  nav >.text-nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: white;
+  }
+  
+  
+  .text-nav > a{
+    text-decoration: none;
+    color: white;
+    margin: 0px 30px;
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+  
+  .text-nav > a:hover{
+    text-decoration:underline;
+  }
+  
+  
+  /** MAIN */
+  
+main{
+  
+    height: 100vh;
+    width: 100%;
+    background-image: url('../img/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    padding: 90px 230px;  
+}
+.container-inline .img{
+    display: inline; 
+}
+
+.container-inline img {
+    height: 100px;
+    width: 100px;
+    border: 2px solid goldenrod;
+    margin: 0px 10px 10px 0px;
+}
+
+.container-block .box-item{
+    display: block; 
+}
+
+.container-block img {
+    height: 100px;
+    width: 100px;
+    border: 2px solid goldenrod;
+    margin: 0px 10px 10px 0px;
+}
+
+
+.container-block .item {
+    display: flex;
+}
+
+.container-block p{
+    margin: 0px 10px;
+    color: whitesmoke;
+    width: 1000px;
+}
+
+
+.container-inline-block .img{
+    display: inline-block; 
+}
+
+.container-inline-block img {
+    height: 100px;
+    width: 100px;
+    border: 2px solid goldenrod;
+    margin: 0px 10px 10px 0px;
+}
+
+/** FOOTER */
+
+footer {
+    height: 120px;
+    width: 100%;
+    padding-block-start: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 0.6rem;
+}
+
+.container-footer {
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    height: 100%;
+}
+
+footer .text-foo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-block-end: 10px;
+}
+
+
+footer .text-foo > a{
+    text-decoration: none;
+    color: white;
+    margin-inline-end: 10px;
+    font-size: 0.7rem;  
+    font-weight: 600;
+}
+
+footer .text-foo > a:hover{
+    text-decoration:underline;
+}
+
+footer img {
+    height: 60px;
+}
+
+.chat {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 80px;
+    height: 80px;
+    margin: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    background-color: #0ab5bb;
+}
+
+.chat > img{
+    max-width: 70%;
+    max-height: 70%
+}

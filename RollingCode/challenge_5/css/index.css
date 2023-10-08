@@ -1,0 +1,105 @@
+/*
+============================
+Archivo de Estilos CSS
+============================
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+    
+body {
+  font-family: Arial, sans-serif;
+  background-color: #a9a9a9;
+}
+
+h1 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+main {
+  padding-left: 4px;
+  padding-top: 10px;
+}
+
+label {
+  font-weight: 600;
+}
+
+.container-form {
+  position: relative;
+  max-width: 100%;
+  height: 290px;
+}
+
+.container-form > h1{
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.form{
+  /* position: relative; */
+  height: 180px;
+  width: 100%;
+  padding-left: 10px;
+  background-color: #dc143c;
+  border-radius: 10px;
+}
+
+.form-title{ 
+  position: absolute;
+  background-color: #6495ed;
+  border-radius: 6px;
+  padding-block: 6px;
+  padding-inline: 3px;
+  top: 33px;
+  left: 19px;
+}
+
+.form-body {
+  padding-top: 32px;
+}
+
+.c-names{
+  width: 245px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24px;
+}
+
+.f-input{
+  display: flex;
+  flex-direction: row;
+}
+
+.f-input > label{
+  margin-bottom: 3px;
+}
+
+.f-name {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.l-user {
+  margin-right: 10px;
+}
+
+.container-table > h1 {
+  margin-bottom: 10px;
+}
+
+th {
+  width: 30px;
+  padding-inline: 10px;
+  background-color: #5f9ea0;
+  text-align: center;
+  color: white;
+}
+
+td {
+  background-color: #ffe4c4;
+}
