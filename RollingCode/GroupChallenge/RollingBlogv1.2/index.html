@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap-->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <!-- FontAwesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+    <!-- Custom CSS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>RollingBlog</title>
+</head>
+
+<body>
+    <header>
+        <!--NavBar-->
+        <nav class="navbar navbar-expand-lg bg-light fixed-top">
+          <div class="container-fluid">
+            <img class="logo-h" src="/img/logo_lg_edit.png" alt="logo_lg_edit.png">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div
+              class="collapse navbar-collapse d-lg-flex flex-lg-row justify-content-lg-between"
+              id="navbarNav"
+            >
+              <ul class="navbar-nav ms-4">
+                <li class="nav-item">
+                  <a class="nav-link nav-link-edit rounded mx-2 active" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link nav-link-edit rounded mx-2" href="/pages/contact.html">Contact</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link nav-link-edit rounded mx-2" href="pages/acercaDeNosotros.html">About us</a>
+                </li>
+              </ul>
+  
+              <div class="nav-item d-flex justify-content-center">
+                <button
+                  class="btn btn-danger nav-link me-2 nav-btns rounded active">
+                  <a class="nav-link" href="/pages/login.html">Login</a>
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-light nav-link nav-btns rounded"
+                  data-bs-toggle="modal"
+                  data-bs-target="#staticBackdrop"
+                >
+                  Register
+                </button> 
+                
+               </div>
+           </div>
+          </div>
+        </nav>
+    </header>
+
+    <main class=" py-5 my-5">
+
+        <!--Slider-->
+
+        <section class="section-slider">
+          <div id="carouselExampleIndicators" class="carousel  slide" data-bs-theme="dark">
+            <div class="carousel-indicators" >
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1" ></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="./img/slider/slider-c.jpg" class="d-block img-fluid imgSlider d-none d-sm-block" width="100%" alt="...">
+                <img src="./img/slider/slider-sm-1.jpg" class="d-block img-fluid d-sm-none ">
+              </div>
+              <div class="carousel-item slider-contain">
+                <img src="./img/slider/slider-c.jpg" class="d-block img-fluid imgSlider  d-none d-sm-block" width="100%" alt="...">
+                <img src="./img/slider/slider-sm-1.jpg" class="d-block img-fluid d-sm-none ">
+              </div>
+              <div class="carousel-item slider-contain">
+                <img src="./img/slider/slider-c.jpg" class="d-block img-fluid  imgSlider  d-none d-sm-block" width="100%" alt="...">
+                <img src="./img/slider/slider-sm-1.jpg" class="d-block img-fluid d-sm-none ">
+              </div>
+            </div>
+                <button class="carousel-control-prev-custom "  type="button" data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide="prev" >
+                  <span class="carousel-control-prev-icon bg-none rounded" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next-custom" type="button" data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide="next">
+                  <span class="carousel-control-next-icon bg-none rounded " aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+          </div>
+        </section>
+
+        <section class="content">
+
+            <!--Card List-->
+
+            <section class="container-fluid mt-5 my-4">
+                <div class="row">
+                    <div class=" col-md-12 col-lg-8">
+                        <h2 class="mx-4">Card List</h2>
+                        <div class="container">
+                            <div class="row d-flex justify-content-end">
+                                <div class=" col-md-6 col-lg-4 pb-4">
+                                    <div class="card custom-card" style="max-width: 18rem">
+                                        <img src="./img/perfil.jpg" class="card-img-top" alt="..." />
+                                        <div class="card-body">
+                                            <h5 class="card-title">Título de la tarjeta</h5>
+                                            <p class="card-text">Descripcion...</p>
+                                            <p class="card-text">
+                                                <small class="text-muted">Última actualización hace 3 minutos</small>
+                                            </p>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <div class="d-grid gap-2">
+                                                <a href="./pages/category/experiences/experience1.html" class="btn btn-outline-secondary" type="button">Ir al post</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class=" col-md-6 col-lg-4 pb-4">
+                                    <div class="card custom-card" style="max-width: 18rem">
+                                        <img src="./img/perfil.jpg" class="card-img-top" alt="..." />
+                                        <div class="card-body">
+                                            <h5 class="card-title">Título de la tarjeta</h5>
+                                            <p class="card-text">Descripcion...</p>
+                                            <p class="card-text">
+                                                <small class="text-muted">Última actualización hace 3 minutos</small>
+                                            </p>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <div class="d-grid gap-2">
+                                                <a href="./pages/experience1.html" class="btn btn-outline-secondary" type="button">Ir al post</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class=" col-md-6 col-lg-4 pb-4">
+                                    <div class="card custom-card" style="max-width: 18rem">
+                                        <img src="./img/perfil.jpg" class="card-img-top" alt="..." />
+                                        <div class="card-body">
+                                            <h5 class="card-title">Título de la tarjeta</h5>
+                                            <p class="card-text">Descripcion...</p>
+                                            <p class="card-text">
+                                                <small class="text-muted">Última actualización hace 3 minutos</small>
+                                            </p>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <div class="d-grid gap-2">
+                                                <a href="./pages/experience1.html" class="btn btn-outline-secondary" type="button">Ir al post</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class=" col-md-6 col-lg-4 pb-4">
+                                    <div class="card custom-card" style="max-width: 18rem">
+                                        <img src="./img/perfil.jpg" class="card-img-top" alt="..." />
+                                        <div class="card-body">
+                                            <h5 class="card-title">Título de la tarjeta</h5>
+                                            <p class="card-text">Descripcion...</p>
+                                            <p class="card-text">
+                                                <small class="text-muted">Última actualización hace 3 minutos</small>
+                                            </p>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <div class="d-grid gap-2">
+                                                <a href="./pages/experience1.html" class="btn btn-outline-secondary" type="button">Ir al post</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class=" col-md-6 col-lg-4 pb-4">
+                                    <div class="card custom-card" style="max-width: 18rem">
+                                        <img src="./img/perfil.jpg" class="card-img-top" alt="..." />
+                                        <div class="card-body">
+                                            <h5 class="card-title">Título de la tarjeta</h5>
+                                            <p class="card-text">Descripcion...</p>
+                                            <p class="card-text">
+                                                <small class="text-muted">Última actualización hace 3 minutos</small>
+                                            </p>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <div class="d-grid gap-2">
+                                                <a href="./pages/experience1.html" class="btn btn-outline-secondary" type="button">Ir al post</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class=" col-md-6 col-lg-4 pb-4">
+                                    <div class="card custom-card" style="max-width: 18rem">
+                                        <img src="./img/perfil.jpg" class="card-img-top" alt="..." />
+                                        <div class="card-body">
+                                            <h5 class="card-title">Título de la tarjeta</h5>
+                                            <p class="card-text">Descripcion...</p>
+                                            <p class="card-text">
+                                                <small class="text-muted">Última actualización hace 3 minutos</small>
+                                            </p>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <div class="d-grid gap-2">
+                                                <a href="./pages/error404.html" class="btn btn-outline-secondary" type="button">Ir al post</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Pagination-->
+
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination justify-content-center mt-4">
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                <li class="page-item active">
+                                    <a class="page-link" href="#">1</a>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="./pages/experiences.html">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="./pages/experiences.html" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <!--Section 2-->
+
+                  
+                        <div class="col-md-12 col-lg-4  ">
+                            <div class="container m-0 my-3 ">
+                              <div class="search my-2 input-group">
+                                <span class="input-group-text" id="basic-addon1">
+                                  <svg xmlnectangle fs-1s="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search"
+                                    viewBox="0 0 16 16">
+                                    <path
+                                      d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z">
+                                    </path>
+                                  </svg>
+                                </span>
+                                <input type="text" class="form-control" placeholder="Input group example" aria-label="Input group example"
+                                  aria-describedby="basic-addon1">
+                              </div>
+                              <div class="container m-0 category d-flex flex-column text-center">
+                                <p>Busqueda por Categorias</p>
+                                <div class=" row">
+                                  <div class="btn category-btn my-2" role="group" aria-label="Basic radio toggle button group">
+                                    <div class="">
+                                      <img src="img/category/FB_IMG_1697348098240.jpg" class="category-img" alt="">
+                                      <div class="container ">
+                                        <button type="button" class="btn btn-danger">Comisiones</button>
+                                        <p>Busca tu comision</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="btn category-btn my-2" role="group" aria-label="Basic radio toggle button group">
+                                    <div class=" ">
+                                      <img src="img/category/experience.jpg" class="category-img" alt="">
+                                      <div class="container ">
+                                        <button type="button" class="btn btn-danger">Testimonios</button>
+                                        <p>Lee o escucha testimonios animadores</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="btn category-btn my-2" role="group" aria-label="Basic radio toggle button group">
+                                    <div class="">
+                                      <img src="img/category/news.jpg" class="category-img" alt="">
+                                      <div class="container ">
+                                        <button type="button" class="btn btn-danger">Novedades</button>
+                                        <p>Descubri las ultimas novedades que tiene Rolling para vos</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                      
+                            </div>
+                            <div class="publicity row d-none d-sm-block">
+                              <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner c-publicity text-center ">
+                                  <div class="carousel-item active c-publicity-item">
+                                    <img src="/img/publi/Dale F5 a tu vida.jpg" class=" w-50 mx-auto " alt="...">
+                                  </div>
+                                  <div class="carousel-item c-publicity-item">
+                                    <img src="/img/publi/foto_no_exif.jpg" class="d-block w-50 mx-auto " alt="...">
+                                  </div>
+                                  <div class="carousel-item c-publicity-item">
+                                    <img src="/img/publi/mercado libre.jpg" class="d-block w-50 mx-auto " alt="...">
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+
+                    </div>
+                </div>
+            </section>
+        </section>
+    </main>
+    <footer>
+
+      <!--Footer -->
+
+        <div class="b-line-divider"></div>
+        <div class="container-fluid text-bg-dark p-3" >
+          <footer class=" row  my-1 ">
+            <div class="row col-sm-12 col-md-4 mb-3 text-center ">
+              <div>
+                <img src="./img/RollingBlog.png" width="200px" length="200px" class="img-fluid">
+               </div>
+            </div>
+            <div class="container row col-sm-12 col-md-4 mb-3 align-items-center text-center ">
+              <ul class="nav d-flex flex-column ">
+                <li class="nav-item mb-2"><a href="/index.html" class="nav-link p-0 text-white">Inicio</a></li>
+                <li class="nav-item mb-2"><a href="/pages/contact.html" class="nav-link p-0 text-white">Contacto</a></li>
+                <li class="nav-item mb-2"><a href="/" class="nav-link p-0 text-white">Acerca de</a></li>
+              </ul>
+            </div>
+            <div class="container col-sm-12 col-md-4 mb-3 text-center">
+              <h5>Contactanos</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white"><i class="bi bi-geo-alt-fill"></i> General Paz 576</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white"><i class="bi bi-geo-alt-fill"></i> Piso 9 - Oficina 2</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white"><i class="bi bi-geo-alt-fill"></i> San Miguel de Tucuman - Argentina</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white"><i class="bi bi-whatsapp"></i> xxx-xxx-xxxx</a></li>
+                <li class="nav-item mb-2"><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="bi bi-check2"></i> Suscripción</button></li>
+              </ul>
+            </div>
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog ">
+                <div class="modal-content modal-background">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5 color-text" id="staticBackdropLabel">Complete el formulario</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    
+                    <div class="mb-3">
+                      <label for="FormControlInput1" class="form-label color-text">Nombre y apellido</label>
+                      <input type="name" class="form-control opacity-75" id="FormControlInput1" placeholder="Martin Perez" minlength="3" maxlength="20" required>
+                    </div>
+                    
+                    <div class="mb-3">
+                      <label for="exampleFormControlInput1" class="form-label color-text">correo electronico</label>
+                      <input type="email" class="form-control opacity-75" id="FormControlInput2" placeholder="name@example.com" required>
+                    </div>
+                    
+                    <div class="mb-3">
+                      <br>
+                      <br>
+                      <p class="color-text">Seleccione los temas de su interes</p>
+                      <div class="row">
+                        <div class="col p-1"><label class="color-text"><input name="comisiones" type="checkbox" />Comisiones</label></div>
+                         <div class="col p-1"><label class="color-text"><input name="testimonios" type="checkbox" />Testimonios</label></div>
+                        <div class="col p-1"><label class="color-text"><input name="novedades" type="checkbox" />Novedades</label></div>
+                        
+                      </div>
+                       <div class="row">
+                        <div class="col p-1"><label class="color-text"><input name="privacy" type="checkbox" checked /> He leído y acepto la <a href="/pages/404.html">Política de Privacidad</a>.</label></div>
+                      </div>               
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <a href="/pages/error404.html"><button type="button" class="btn btn-primary">Registrar</button></a>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+        
+        <div class="b-line-divider2 text-bg-dark pt-5">
+          <h3>&copy; RollingBlog 2023</h3>
+        </div>
+
+
+    </footer>
+</body>
+<script src="/js/bootstrap.min.js"></script>
+</html>

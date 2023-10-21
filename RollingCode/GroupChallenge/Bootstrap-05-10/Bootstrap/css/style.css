@@ -1,0 +1,31 @@
+@media all and (max-width:576px) {
+    .imgSlider {
+        height: 200px;
+    }
+}
+
+.facebook:hover {
+    background: #41579a;
+    color: #fff;
+    border-radius: 5px;
+    padding: 3px;
+
+}
+
+.instagram:hover {
+    background: linear-gradient(to top right,
+            #fcde30,
+            #e9712a,
+            #d2313b,
+            #ae4198,
+            #7540a1,
+            #5443a8);
+    color: #fff;
+    border-radius: 5px;
+    padding: 3px;
+}
+.twitter:hover {
+    background: #00acee;
+    color: #fff;
+    border-radius: 5px;
+  }
