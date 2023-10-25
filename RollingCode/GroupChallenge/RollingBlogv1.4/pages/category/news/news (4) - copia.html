@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="../../../styles.css">
+  <link rel="stylesheet" href="../../../css/bootstrap.min.css" />
+  <title>Document</title>
+</head>
+
+<body>
+  <header>
+    <!--NavBar-->
+    <nav class="navbar navbar-expand-lg bg-light fixed-top">
+      <div class="container-fluid">
+        <a href="../../../index.html"><img class="logo-h" src="../../../img/logo_lg_edit.png" alt="logo_lg_edit.png"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse d-lg-flex flex-lg-row justify-content-lg-between" id="navbarNav">
+          <ul class="navbar-nav ms-4">
+            <li class="nav-item">
+              <a class="nav-link nav-link-edit rounded mx-2 active" aria-current="page" href="../../../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-edit rounded mx-2" href="/pages/contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-edit rounded mx-2" href="pages/acercaDeNosotros.html">About us</a>
+            </li>
+          </ul>
+
+          <div class="nav-item d-flex justify-content-center">
+            <button class="btn btn-danger nav-link me-2 nav-btns rounded active">
+              <a class="nav-link" href="../../login.html">Login</a>
+            </button>
+            <button type="button" class="btn btn-light nav-link nav-btns rounded" data-bs-toggle="modal"
+              data-bs-target="#staticBackdrop">
+              Register
+            </button>
+
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!--News-->
+
+    <section class="container-fluid my-5">
+      
+      <h1 class="my-5 text-center py-5">
+
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="../../../index.html">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Novedades</li>
+          </ol>
+        </nav>
+
+
+        <div class="bg-danger p-2 text-dark bg-opacity-25">Ultimas Novedades</div>
+      </h1>
+      
+      <div class="row">
+
+
+        <article class="card bg-body-secondary mb-5">
+          <div class=" mb-3" tyle="max-width: 540px;">
+            <div class="row g-0">
+              <div class="col-md-6">
+                <img src="../../../img/category/News/final.jpg" class="img-fluid mt-3" alt="...">
+              </div>
+              <div class="col-md-6">
+                <div class="card-body text-center mt-3 px-5">
+                  <h5 class="card-title bg-light py-1">Evento JS 1.0<span
+                      class="badge rounded-pill bg-danger ms-2">Nuevo</span><span
+                      class="badge rounded-pill bg-warning ms-2">Evento</span></h5>
+                  <p class="card-text">
+                  <p>Buenos Dias!!</p>
+                  <p>Queremos contarles estamos muy emocionados por el Evento JS 1.0 que estamos organizando para el 27
+                    y 28 de octubre, en el que nos encantaría que participen.</p>
+                  <p>Por eso paso por aquí para invitarlos a que se sumen, armen sus equipos y demuestren de lo que son
+                    capaces de crear con todo lo que han aprendido.
+                    Sabemos que tienen grandes mentores que les han marcado el camino, es momento de
+                    demostrarles que pueden ir más allá, que aplicando todos los conocimientos adquiridos pueden
+                    realizar proyectos de calidad.</p>
+                  <p>A continuación los detalles de la dinámica del evento:</p>
+                  <ul>
+                    <li>El día viernes 27 de Octubre tendremos una serie de charlas o workshop en el entrepiso
+                      del site para orientarlos sobre las tecnologías que usarán, lo que necesitarán para
+                      cumplir con el desafío del día siguiente y algunos conocimientos extras sobre el
+                      desarrollo web.</li>
+                    <li>El día sábado 28 de Octubre comenzará temprano la jornada de trabajo donde cada equipo
+                      tendrá un sector asignado de las oficinas de RollingCode para trabajar en el proyecto,
+                      cuya temática se revelará ese día.</li>
+                  </ul>
+                  </p>
+                  <p>Al finalizar el tiempo de desarrollo, los equipos presentarán sus proyectos y se votará por los
+                    tres mejores, luego se entregarán los premios o reconocimientos.</p>
+                  <!-- Button trigger modal -->
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    Premios y Condiciones
+                  </button>
+                  <!-- Modal -->
+                  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-scrollable">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="staticBackdropLabel">
+                            <p>Premios y Condiciones:</p>
+                          </h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          <p>
+                          <h4>¿Qué recibirán los equipos que logren los objetivos?</h4>
+                          <p>
+                          <ul>
+                            <li>1er lugar: Certificados de reconocimiento, Merchandising de RollingCode
+                              School y una jornada de trabajo con el equipo de Labs</li>
+                            <li>2do lugar: Certificados de reconocimiento y Merchandising de RollingCode
+                              School</li>
+                            <li>3er lugar: Certificados de reconocimiento</li>
+                          </ul>
+                          </p>
+                          <h4>¿Qué recibirán todos los equipos?</h4>
+                          <p>
+                          <ul>
+                            <li>Una experiencia nueva, increíble e inolvidable</li>
+                            <li>Conocer a gente nueva</li>
+                            <li>Mucho aprendizaje nuevo, tanto técnico como de soft skills</li>
+                            <li>Un proyecto que pueden seguir desarrollando para mostrar de qué son capaces.</li>
+                          </ul>
+                          </p>
+                          <h4>¿Qué deben hacer para participar?</h4>
+                          <p>
+                          <ul>
+                            <li>Pertenecer a una comisión activa de Rollingcode SChool</li>
+                            <li>Armar un equipo de no más de 5 personas (todas deben vivir en Tucumán o poder viajar
+                              para estar presentes y no es necesario que sean de la misma comisión)</li>
+                            <li>Asegurarse de tener los elementos de trabajo (una laptop o notebook)</li>
+                            <li>Tener disponibilidad para cumplir con la cantidad de horas requeridas para la resolución
+                              del desafío (El sábado será de 9 a 16 hs la jornada)</li>
+                            <li>Haber terminado el módulo 2 del curso Fullstack (el proyecto se hará con Javascript
+                              vanilla)</li>
+                            <li>Llenar el siguiente formulario para inscribirse: <a href="https://forms.gle/nF8yMjQt6Zt75jN19">Formulario</a> (Se
+                              llena uno por equipo)</li>
+                          </ul>
+                          </p>
+                          <p>El cupo es limitado, solo se podrán inscribir 12 equipos como máximo así que no pierdan el
+                            tiempo y anótense hasta el 20 de Octubre.
+                            Cualquier duda o consulta sobre este evento pueden transmitirlas a través del tutor o Mentor
+                            de su comisión, ellos nos compartirán sus dudas para poder ayudarlos.
+                          </p>
+                          <p>Muchos éxitos!</p>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="card-text"><small class="text-muted">Última actualización hace 3 minutos</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+
+        <article class="card bg-body-tertiary mb-5">
+          <div class=" mb-3" tyle="max-width: 540px;">
+            <div class="row g-0">
+              <div class="col-md-6">
+                <img src="../../../img/category/News/Dia-Salud-mental.jpg" class="img-fluid mt-3" alt="...">
+              </div>
+              <div class="col-md-6">
+                <div class="card-body text-center mt-3">
+                  <h5 class="card-title bg-body-secondary py-1">Dia Mundial De La Salud Mental<span
+                      class="badge rounded-pill bg-danger ms-2">Nuevo</span><span
+                      class="badge rounded-pill bg-info ms-2">Info</span></h5>
+                  <p class="card-text">
+                  <p>Muy buenas tardes-noches para todos!!!</p>
+                  <p>Hace poco, más precisamente el día martes 10/10, se conmemoró el Día Mundial de la Salud Mental.
+                    Lo traigo, por una cuestión sencilla, nuestra profesión se basa 100% en el uso de la mente y si no
+                    tenemos una salud mental buena, nos va a traer muchos inconvenientes para realizar y disfrutar las
+                    tareas que forman parte de la profesión que tanto nos gusta y de la vida en sí.
+                    Aprovechen el fin de semana largo para disfrutar y despejar la mente.
+                    Relájense y disfruten de las personas que tienen alrededor.</p>
+                  <p>Que tengan un excelente fin de semana!!!</p>
+                  <p>Saludos!!!!</p>
+                  </p>
+                  <p class="card-text"><small class="text-muted">Última actualización 10 de Octubre de 2023</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+
+        <article class="card bg-body-secondary mb-5">
+          <div class=" mb-3" tyle="max-width: 540px;">
+            <div class="row g-0">
+              <div class="col-md-6">
+                <img src="../../../img/category/News/dia-programador.png" class="img-fluid mt-3" alt="...">
+              </div>
+              <div class="col-md-6">
+                <div class="card-body text-center mt-3">
+                  <h5 class="card-title bg-light py-1">Feliz Dia De La Programacion<span
+                      class="badge rounded-pill bg-info ms-2">Info</span></h5>
+                  <p class="card-text">
+                  <h6 class="fs-4">El Día de la Programación: ¿Por qué el 256º día del año?</h6>
+                  <p>¡Feliz día del programador! Hoy, 13 de septiembre, tiene lugar el día número 256 del año. ¿Que no
+                    te dice nada esta referencia? Pues tal día como hoy desde 2009 (o 12 de septiembre, en caso de que
+                    el año sea bisiesto), se celebra el Día del Programador. La elección del día número 256 no es una
+                    decisión aleatoria, sino la fecha más propicia para homenajear a todos los programadores del mundo.
+                  </p>
+                  <p>La razón por la que esta fecha fue escogida como día de los programadores se debe a que 256 es la
+                    cantidad de números que pueden representarse con 8 bits; o su equivalente, es decir, 1 byte. Además
+                    de que 256 es la mayor potencia de 2 que es menor de 365. Otra cifra que nada tiene de casual, ya
+                    que, justamente, es el número de días que tiene un año que no sea bisiesto.</p>
+                  <p>La idea de que los programadores tuvieran su propio día en el calendario surgió de la mente de
+                    Valentin Balt. Un desarrollador web ruso que en 2002 decidió proponer la festividad cuando trabajaba
+                    en Parallels Technologies. Una empresa que entre otras cosas está especializada en el diseño de todo
+                    tipo de sitios web. Un movimiento que empezó con una recogida de firmas para presentarle al gobierno
+                    ruso una petición formal que permitiera la celebración del Día de los Programadores. Y, una
+                    propuesta que 7 años más tarde se materializó en un Decreto que el propio presidente ruso Dmitri
+                    Medvédev aprobó. El presidente ruso firmó dicha propuesta el 11 de septiembre de 2009; que a partir
+                    de ese momento se convertiría en el primer Día del programador.</p>
+
+
+                  </p>
+                  <p class="card-text"><small class="text-muted">Última actualización 13 de Septiembre de 2023</small>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+
+        <article class="card bg-body-tertiary mb-5">
+          <div class=" mb-3" tyle="max-width: 540px;">
+            <div class="row g-0">
+              <div class="col-md-6">
+                <img src="../../../img/category/News/ergonomia_1.jpg" class="img-fluid mt-3" alt="...">
+              </div>
+              <div class="col-md-6">
+                <div class="card-body text-center mt-3">
+                  <h5 class="card-title bg-body-secondary py-1">Ergonomia En La Programacion<span
+                      class="badge rounded-pill bg-info ms-2">Info</span></h5>
+                  <p class="card-text">
+                  <p>Un aspecto fundamental de la ergonomía en la programación es la configuración de la estación de
+                    trabajo. Aquí hay algunas pautas clave a considerar:</p>
+                  <p>
+                  <ul>
+                    <li class="mb-1"><span class="fw-bold">La Silla y la Postura:</span>
+                      Una silla ergonómica que soporte la curvatura natural de la columna y permita ajustar la altura es
+                      esencial. Mantener una postura adecuada, con los pies apoyados en el suelo y los brazos a la
+                      altura del teclado, reduce la tensión en la espalda y el cuello.</li>
+                    <li class="mb-1"><span class="fw-bold">El Monitor:</span>
+                      El monitor debe estar a la altura de los ojos y a una distancia de visualización cómoda. Esto
+                      evita la fatiga ocular y el dolor de cuello.</li>
+                    <li class="mb-1"><span class="fw-bold">Teclado y Ratón:</span>
+                      Un teclado y un ratón ergonómicos son fundamentales para prevenir lesiones por esfuerzo
+                      repetitivo. Los teclados divididos y los ratones verticales son opciones que reducen la tensión en
+                      las muñecas.</li>
+                    <li class="mb-1"><span class="fw-bold">Iluminación y Ruido:</span>
+                      Una iluminación adecuada y un entorno silencioso contribuyen al confort y la concentración. Una
+                      pantalla antirreflejos también es útil para reducir el brillo.</li>
+                  </ul>
+                  </p>
+                  <h6 class="fs-4">La Ergonomía y las Prácticas de Trabajo</h6>
+                  <p>Además de la configuración física, las prácticas de trabajo también son cruciales para la ergonomía
+                    en la programación:</p>
+                  <p>
+                  <ul>
+                    <li class="mb-1"><span class="fw-bold">Pausas y Ejercicio:</span>
+                      Programar durante largas horas puede ser agotador. Realizar pausas breves para estirarse y
+                      ejercitar los músculos ayuda a prevenir lesiones y mejorar la concentración.</li>
+                    <li class="mb-1"><span class="fw-bold">Organización del Espacio de Trabajo:</span>
+                      Mantener un espacio de trabajo limpio y organizado reduce el estrés y la confusión, permitiendo un
+                      enfoque más claro en la tarea en cuestión.</li>
+                    <li class="mb-1"><span class="fw-bold">Gestión del Tiempo:</span>
+                      Administrar el tiempo de trabajo es esencial. Evitar el agotamiento y establecer horarios de
+                      trabajo equilibrados es fundamental para la salud a largo plazo.</li>
+                  </ul>
+                  </p>
+                  <h6 class="fs-4">Beneficios de la Ergonomía en la Programación</h6>
+                  <p>La aplicación de la ergonomía en la programación no solo se traduce en un mayor bienestar físico y
+                    mental, sino que también conlleva beneficios en términos de productividad y calidad del trabajo. Los
+                    programadores que trabajan en entornos ergonómicos tienden a ser más eficientes, creativos y menos
+                    propensos a las lesiones.</p>
+                  </p>
+                  <p class="card-text"><small class="text-muted">Última actualización 1 de Septiembre de 2023</small>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!--Pagination-->
+
+        <nav aria-label="Page navigation example">
+          <ul class="pagination justify-content-end">
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+              </a>
+            </li>
+            <li class="page-item active">
+              <a class="page-link" href="#">1</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="./pages/experiences.html">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="./pages/experiences.html" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+      </div>
+    </section>
+
+  </main>
+  <footer>
+
+    <!--Footer -->
+
+    <div class="b-line-divider"></div>
+    <div class="container-fluid text-bg-dark p-3">
+      <footer class=" row  my-1 ">
+        <div class="row col-sm-12 col-md-4 mb-3 text-center ">
+          <div>
+            <img src="../../../img/RollingBlog.png" width="200px" length="200px" class="img-fluid">
+          </div>
+        </div>
+        <div class="container row col-sm-12 col-md-4 mb-3 align-items-center text-center ">
+          <ul class="nav d-flex flex-column ">
+            <li class="nav-item mb-2"><a href="/index.html" class="nav-link p-0 text-white">Inicio</a></li>
+            <li class="nav-item mb-2"><a href="/pages/contact.html" class="nav-link p-0 text-white">Contacto</a></li>
+            <li class="nav-item mb-2"><a href="/" class="nav-link p-0 text-white">Acerca de</a></li>
+          </ul>
+        </div>
+        <div class="container col-sm-12 col-md-4 mb-3 text-center">
+          <h5>Contactanos</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white"><i class="bi bi-geo-alt-fill"></i>
+                General Paz 576</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white"><i class="bi bi-geo-alt-fill"></i>
+                Piso 9 - Oficina 2</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white"><i class="bi bi-geo-alt-fill"></i> San
+                Miguel de Tucuman - Argentina</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white"><i class="bi bi-whatsapp"></i>
+                xxx-xxx-xxxx</a></li>
+            <li class="nav-item mb-2"><button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop"><i class="bi bi-check2"></i> Suscripción</button></li>
+          </ul>
+        </div>
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+          aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog ">
+            <div class="modal-content modal-background">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5 color-text" id="staticBackdropLabel">Complete el formulario</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+
+                <div class="mb-3">
+                  <label for="FormControlInput1" class="form-label color-text">Nombre y apellido</label>
+                  <input type="name" class="form-control opacity-75" id="FormControlInput1" placeholder="Martin Perez"
+                    minlength="3" maxlength="20" required>
+                </div>
+
+                <div class="mb-3">
+                  <label for="exampleFormControlInput1" class="form-label color-text">correo electronico</label>
+                  <input type="email" class="form-control opacity-75" id="FormControlInput2"
+                    placeholder="name@example.com" required>
+                </div>
+
+                <div class="mb-3">
+                  <br>
+                  <br>
+                  <p class="color-text">Seleccione los temas de su interes</p>
+                  <div class="row">
+                    <div class="col p-1"><label class="color-text"><input name="comisiones"
+                          type="checkbox" />Comisiones</label></div>
+                    <div class="col p-1"><label class="color-text"><input name="testimonios"
+                          type="checkbox" />Testimonios</label></div>
+                    <div class="col p-1"><label class="color-text"><input name="novedades"
+                          type="checkbox" />Novedades</label></div>
+
+                  </div>
+                  <div class="row">
+                    <div class="col p-1"><label class="color-text"><input name="privacy" type="checkbox" checked /> He
+                        leído y acepto la <a href="/pages/404.html">Política de Privacidad</a>.</label></div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <a href="/pages/error404.html"><button type="button" class="btn btn-primary">Registrar</button></a>
+
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="b-line-divider2 text-bg-dark pt-5">
+      <h3>&copy; RollingBlog 2023</h3>
+    </div>
+
+
+  </footer>
+</body>
+<script src="/js/bootstrap.min.js"></script>
+
+</html>
