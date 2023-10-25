@@ -31,9 +31,15 @@ div.line {
   border: 0;
   border-top: 1px dashed #ccc;
 }
-.logo-h {
+.logo-lg {
   height: 100%;
   width: 150px;
+  cursor: pointer;
+}
+
+.logo-sm {
+  height: 100%;
+  width: 52px;
   cursor: pointer;
 }
 
@@ -86,13 +92,19 @@ img{
 }
 
 .search-input{
-  border: 2px solid var(--primary-color);
+  border: 1px solid var(--primary-color);
   border-radius: 5px;
 }
 
 .category-item {
   background-color: var(--background-color);
   box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s;
+}
+
+.category-item:hover{
+  background-color: var(--background-color);
+  transform: scale(1.05);
 }
 
 .category-btn {
@@ -101,7 +113,7 @@ img{
 }
 
 .category-btn:hover {
-  border: 2px solid var(--primary-color);
+  border: 1px solid var(--primary-color);
   color: var(--primary-color);
 
 }
@@ -164,12 +176,12 @@ img {
   vertical-align: bottom;
 }
      
+/* Modal */
 .modal-background{
-  background-color: #0a0a0a;
+  background-color: var(--card-background-color);
   background-position: center; 
   background-repeat: no-repeat; 
   background-size: cover; 
-  opacity:10;
 }
 
  label,
@@ -179,11 +191,22 @@ margin-top: 1em;
 
 }
 
-input:checked {
-border: none;
-outline: 2px solid deeppink;
-}
 .color-text{
-color:#dbdbdb;
-font-weight: bolder;
+  color:var(--text-dark-color);
+}
+
+.btn-close{
+  top: 20px;
+  right: 20px;
+}
+
+.btn-signup{
+  background-color: var(--primary-color);
+  color: var(--background-color-light);
+}
+
+.btn-signup:hover {
+  background-color: var(--background-color-light);
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
 }
