@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Un blog de estudiantes para estudiantes, testimonios y novedades">
+  <meta name="keywords" content="RollingCode, experiencias, programacion, noticias">
+  <meta name="author" content="Programadores sin fronteras">
+  <link rel="shortcut icon" href="/img/logo_sm.png">
+  <link rel="stylesheet" href="/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="/css/categories.css" />
+  <link rel="stylesheet" href="/styles.css">
+  <title>Categorias - RollingBlog</title>
+</head>
+
+<body>
+  <header>
+    <!--NavBar-->
+    <nav class="navbar navbar-expand-lg bg-light fixed-top border border-top-0">
+      <div class="container-fluid">
+        <div class="d-none d-lg-block">
+          <a href="../index.html"> <img class="logo-lg-h" src="/img/logo_lg_edit.png" alt="logo_lg.png"> </a>
+        </div>
+        <div class="d-sm-block d-lg-none">
+          <a href="../index.html"><img class="logo-sm-h" src="/img/logo_sm.png" alt="logo_sm.png"></a>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse d-lg-flex flex-lg-row justify-content-lg-between" id="navbarNav">
+          <ul class="navbar-nav ms-lg-4 my-3 my-lg-0">
+            <li class="nav-item">
+              <a class="nav-link nav-link-edit rounded mx-1 text-center active" aria-current="page" href="../index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-edit rounded mx-1 text-center" href="/pages/contact.html">Contacto</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-edit rounded mx-1 text-center" href="/pages/acercaDeNosotros.html">Acerca de Nosotros</a>
+            </li>
+          </ul>
+
+          <div class="nav-item d-flex justify-content-center">
+            <button class="btn nav-link me-2 rounded-2 nav-btns active">
+              <a class="nav-link" href="/pages/login.html">Ingresar</a>
+            </button>
+            <button type="button" class="btn nav-link rounded-2 nav-btns" data-bs-toggle="modal"
+              data-bs-target="#staticBackdrop">
+              Suscribirse
+            </button>
+
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="py-5 my-5">
+
+    <!--Categories-->
+
+    <section class="container my-2 gy-3 ">
+
+      <div class="text-center fs-4 ">
+        <nav class="mb-3" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item "><a class="link-custom" href="/index.html">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Categorias</li>
+          </ol>
+        </nav>
+        <h1 class="bg-h1 rounded-2 p-2 text-dark bg-opacity-25 m-4 ">Categorias</h1>
+      </div>
+      <!--Comisiones-->
+
+      <div id="comisiones" class="card row p-1 my-5">
+        <h3 class="border-3 border-bottom text-center">Comisiones</h3>
+        <div class="row">
+          <div class="col-sm-12 col-md-6 col-lg-6 pb-4 mx-auto ">
+            <div class="card custom-card mx-auto " style="max-width: 18rem">
+              <img src="/img/category/FB_IMG_1697348098240.jpg" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Comision 80i</h5>
+                <p class="card-text">Descubri esta comision</p>
+                <p class="card-text">
+                  <small class="text-muted">Última actualización hace 1 semana</small>
+                </p>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <div class="d-grid gap-2">
+                  <a href="/pages/category/comisiones/comisiones.html#comision80i" class="btn btn-outline-secondary"
+                    type="button">Ir
+                    al post</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <button class="btn-add w-50 mx-auto m-3 p-1 " type="button"><a class="btn-add" href="/pages/login.html"><i
+              class="bi bi-plus-square fs-5 m-1 "></i>Agrega tu comision</a></button>
+      </div>
+      </div>
+
+      <!-- Testimonios -->
+
+      <div id="testimonios" class="card row p-4 my-5">
+        <h3 class="border-3 border-bottom text-center ">Testimonios</h3>
+        <div class="container mt-3">
+          <div class="row">
+            <div class="col-12 col-md-6 col-lg-3 pb-4">
+              <div class="card mx-auto custom-card" style="max-width: 18rem">
+                <img src="/img/category/testimonio/davidcarramza1.png" alt="fotografo programador">
+                <div class="card-body">
+                  <h5 class="card-title bg-light py-1 text-center">"Una experiencia unica..."</h5>
+                  <span class="badge rounded-pill bg-danger ms-2">Nuevo</span><span
+                    class="badge rounded-pill bg-secondary ms-2">Testimonios</span>
+                  <div class="card-text">
+                    <p>Nos comparte su testimonio:</p>
+                    <p>David Carranza videografo y programador ¿Como es su experiencia?</p>
+                  </div>
+                  <p class="card-text">
+                    <small class="text-muted">Última actualización hace 3 minutos</small>
+                  </p>
+                  <div class="pb-2">
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                  </div>
+                  <div class="d-grid gap-2">
+                    <a href="/pages/category/experiences/experience1.html" class="btn btn-outline-secondary"
+                      type="button">Ir al post</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 pb-4">
+              <div class="card mx-auto custom-card" style="max-width: 18rem">
+                <img src="/img/category/testimonio/franconieva2.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title bg-light py-1 text-center">"Aprendizaje, Colaboración y Desarrollo"</h5>
+                  <span class="badge rounded-pill bg-danger ms-2">Nuevo</span><span
+                    class="badge rounded-pill bg-secondary ms-2">Testimonios</span>
+                  <div class="card-text">
+                    <p>Nos comparte su testimonio:</p>
+                    <p>Franco Nieva cuenta su experiencia en RollingCode</p>
+                  </div>
+                  <p class="card-text">
+                    <small class="text-muted">Última actualización hace 3 minutos</small>
+                  </p>
+                  <div class="pb-2">
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                  </div>
+                  <div class="d-grid gap-2">
+                    <a href="/pages/category/experiences/experience2.html" class="btn btn-outline-secondary"
+                      type="button">Ir al post</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3 pb-4">
+              <div class="card mx-auto custom-card" style="max-width: 18rem">
+                <img src="/img/category/testimonio/luisavila1.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title bg-light py-1 text-center">"Creando nuevos caminos"</h5>
+                  <span class="badge rounded-pill bg-danger ms-2">Nuevo</span><span
+                    class="badge rounded-pill bg-secondary ms-2">Testimonios</span>
+                  <p class="card-text">
+                  <p>Nos comparte su testimonio:</p>
+                  <p class="pt-4">Luis Avila nos cuenta como inicio el curso</p>
+                  </p>
+                  <p class="card-text">
+                    <small class="text-muted">Última actualización hace 3 minutos</small>
+                  </p>
+                  <div class="pb-2">
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                  </div>
+                  <div class="d-grid gap-2">
+                    <a href="/pages/category/experiences/experience3.html" class="btn btn-outline-secondary"
+                      type="button">Ir al post</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 pb-4">
+              <div class="card mx-auto custom-card" style="max-width: 18rem">
+                <img src="/img/category/testimonio/lucasJimenez2.jpg" class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title pt-3 ">"Un cambio de..."</h5>
+                  <span class="badge rounded-pill bg-secondary ms-2">Testimonios</span>
+                  <div class="card-text pt-3">
+                    <p>Nos comparte su testimonio:</p>
+                    <p>Lucas Jimenez nos ofrece su experiencia de cursado</p>
+                  </div>
+                  <p class="card-text">
+                    <small class="text-muted">Última actualización hace 3 minutos</small>
+                  </p>
+                  <span class="fa fa-star"></span>
+                  <span class="fa fa-star"></span>
+                  <span class="fa fa-star"></span>
+                  <span class="fa fa-star"></span>
+                  <span class="fa fa-star"></span>
+                  <div class="d-grid gap-2">
+                    <a href="/pages/category/experiences/experience4.html" class="btn btn-outline-secondary"
+                      type="button">Ir
+                      al post</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="btn-add w-50 mx-auto p-1" type="button"><i class="bi bi-plus-square fs-5 m-1 "></i><a
+                class="btn-add" href="/pages/login.html">Agrega tu testimonio</a></button>
+          </div>
+
+        </div>
+      </div>
+      </div>
+      <!--News-->
+
+      <div id="novedades" class="card row p-4 my-5">
+        <h3 class="border-3 border-bottom text-center">Novedades</h3>
+        <div class="container mt-3">
+          <div class="row">
+            <div class="col-12 col-md-6 col-lg-3 pb-4">
+              <div class="card mx-auto custom-card" style="max-width: 18rem">
+                <img src="/img/category/news/final.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title bg-light py-1 text-center">Evento JS 1.0</h5>
+                  <span class="badge rounded-pill bg-danger ms-2">Nuevo</span><span
+                    class="badge rounded-pill bg-warning ms-2">Evento</span><span
+                    class="badge rounded-pill bg-secondary ms-2">Novedades</span>
+                  <p class="card-text">
+                  <p>Buenos Dias!!</p>
+                  <p>Queremos contarles que estamos muy emocionados por el Evento JS 1.0</p>
+                  </p>
+                  <p class="card-text">
+                    <small class="text-muted">Última actualización hace 3 minutos</small>
+                  </p>
+                  <div class="pb-2">
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                  </div>
+                  <div class="d-grid gap-2">
+                    <a href="/pages/category/news/news.html#new1" class="btn btn-outline-secondary" type="button">Ir al
+                      post</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 pb-4">
+              <div class="card mx-auto custom-card" style="max-width: 18rem">
+                <img src="/img/category/news/Dia-Salud-mental.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title bg-light py-1 text-center">Dia Mundial de la Salud Mental</h5>
+                  <span class="badge rounded-pill bg-danger ms-2">Nuevo</span><span
+                    class="badge rounded-pill bg-info ms-2">info</span><span
+                    class="badge rounded-pill bg-secondary ms-2">Novedades</span>
+                  <p class="card-text">
+                  <p>Buenos Dias!!</p>
+                  <p>El día martes 10/10, se conmemoró el Día Mundial de la Salud Mental.</p>
+                  </p>
+                  <p class="card-text">
+                    <small class="text-muted">Última actualización el 10 de Octubre de 2023</small>
+                  </p>
+                  <div class="pb-2">
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                  </div>
+                  <div class="d-grid gap-2">
+                    <a href="/pages/category/news/news.html#new2" class="btn btn-outline-secondary" type="button">Ir al
+                      post</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 pb-4">
+              <div class="card mx-auto custom-card" style="max-width: 18rem">
+                <img src="/img/category/news/dia-programador.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title bg-light py-1 text-center">Dia de la Programacion</h5>
+                  <span class="badge rounded-pill bg-danger ms-2">Nuevo</span><span
+                    class="badge rounded-pill bg-info ms-2">Info</span><span
+                    class="badge rounded-pill bg-secondary ms-2">Novedades</span>
+                  <p class="card-text">
+                  <p>¡Feliz día del programador!</p>
+                  <p>El Día de la Programación: ¿Por qué el 256º día del año?</p>
+                  </p>
+                  <p class="card-text">
+                    <small class="text-muted">Última actualización el 13 de Septiembre de 2023</small>
+                  </p>
+                  <div class="pb-2">
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                  </div>
+                  <div class="d-grid gap-2">
+                    <a href="/pages/category/news/news.html#new3" class="btn btn-outline-secondary" type="button">Ir al
+                      post</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 pb-4">
+              <div class="card mx-auto custom-card" style="max-width: 18rem">
+                <img src="/img/category/news/ergonomia_1.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title bg-light py-1 text-center">Ergonomia</h5>
+                  </span><span class="badge rounded-pill bg-info ms-2">Info</span><span
+                    class="badge rounded-pill bg-secondary ms-2">Novedades</span>
+                  <p class="card-text">
+                  <p>Ergonomia en la programacion!!</p>
+                  <p>Consejos, beneficios y buenas practicas en la programacion</p>
+                  </p>
+                  <p class="card-text">
+                    <small class="text-muted">Última actualización el 1 de Septiembre de 2023</small>
+                  </p>
+                  <div class="pb-2">
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                  </div>
+                  <div class="d-grid gap-2">
+                    <a href="/pages/category/news/news.html#new4" class="btn btn-outline-secondary" type="button">Ir al
+                      post</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <!--Footer -->
+  <footer>
+
+    <div class="container-fluid footer-bg p-2">
+      <div class="row my-1">
+        <div class="row col-sm-12 col-md-4 mb-3 mx-auto text-center">
+          <div class="my-auto">
+            <img src="/img/logo-lg-f.png" class="img-fluid" alt="image RollingBlog">
+          </div>
+        </div>
+        <div class="row col-sm-12 col-md-4 align-items-center mx-auto text-center">
+          <ul class="nav d-flex flex-column ">
+            <li class="nav-item mb-2"><a href="../index.html" class="nav-link p-0 text-white">Inicio</a></li>
+            <li class="nav-item mb-2"><a href="/pages/contact.html" class="nav-link p-0 text-white">Contacto</a></li>
+            <li class="nav-item"><a href="/pages/AcercadeNosotros.html" class="nav-link p-0 text-white">Acerca de
+                Nosotros</a></li>
+          </ul>
+        </div>
+        <div class="row col-sm-12 col-md-4 mb-2 mx-auto text-center">
+          <h5>Contactanos</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="/pages/contact.html" class="nav-link p-0 text-white"><i
+                  class="bi bi-geo-alt-fill"></i> General Paz 576</a></li>
+            <li class="nav-item mb-2"><a href="/pages/contact.html" class="nav-link p-0 text-white"><i
+                  class="bi bi-geo-alt-fill"></i> Piso 9 - Oficina 2</a></li>
+            <li class="nav-item mb-4"><a href="/pages/contact.html" class="nav-link p-0 text-white"><i
+                  class="bi bi-geo-alt-fill"></i> San Miguel de Tucuman - Argentina</a></li>
+            <li class="nav-item mb-2"><button type="button" class="btn btn-footer-s" data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop"><i class="bi bi-check2"></i> Suscripción</button></li>
+          </ul>
+        </div>
+
+        <!--Modal-->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+          aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog ">
+            <div class="modal-content modal-background">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5 color-text mx-auto" id="staticBackdropLabel">Suscribite para estar al tanto
+                  de nuestras publicaciones</h1>
+                <button type="button" class="btn-close position-absolute" data-bs-dismiss="modal"
+                  aria-label="Close"></button>
+              </div>
+              <form action="">
+                <div class="modal-body">
+
+                  <div class="mb-1">
+                    <label for="FormControlInput1" class="form-label color-text">Nombre Completo</label>
+                    <input type="name" class="form-control opacity-75" id="FormControlInput1" placeholder="Martin Perez"
+                      pattern="[A-Za-z]{1,32}" minlength="3" maxlength="20" required>
+                  </div>
+
+                  <div class="mb-4">
+                    <label for="exampleFormControlInput1" class="form-label color-text">Email</label>
+                    <input type="email" class="form-control opacity-75" id="FormControlInput2"
+                      placeholder="name@example.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+                  </div>
+
+                  <div class="mb-4">
+                    <p class="color-text m-0">Selecciona temas de tu interes</p>
+                    <div class="row form-check d-flex">
+                      <div class="col"><label class="color-text form-check-label"><input class="form-check-input"
+                            name="comisiones" type="checkbox" />Comisiones</label></div>
+                      <div class="col"><label class="color-text form-check-label"><input class="form-check-input"
+                            name="testimonios" type="checkbox" />Testimonios</label></div>
+                      <div class="col"><label class="color-text form-check-label"><input class="form-check-input"
+                            name="novedades" type="checkbox" />Novedades</label></div>
+
+                    </div>
+                    <div class="row">
+                      <div class="col p-1"><label class="color-text form-check-label">
+                          <input class="form-check-input" name="privacy" type="checkbox" checked /> He leído y acepto la
+                          <a href="/pages/404.html">Política de Privacidad</a></label></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer d-flex justify-content-center">
+                  <button type="submit" class="btn w-100 rounded-pill btn-signup">Suscribirse</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="b-line-divider2 w-100 text-bg-dark pt-5">
+      <h3>&copy; RollingBlog 2023</h3>
+    </div>
+  </footer>
+</body>
+<script src="/js/bootstrap.min.js"></script>
+
+</html>

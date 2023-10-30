@@ -1,0 +1,118 @@
+/* Comments */
+.publisher-img {
+  background-color: var(--pusblisher-background-color);
+}
+
+.publisher-bg-light {
+  background-color: var(--card-background-color);
+}
+
+.publisher-sign {
+  font-family: "Cedarville Cursive", cursive;
+}
+
+.comment-cont {
+  background-color: var(--card-background-color);
+}
+
+.bxs-dislike {
+  font-size: 1.5rem;
+}
+
+.bxs-dislike:hover {
+  cursor: pointer;
+  color: red;
+}
+
+.bxs-like {
+  font-size: 1.5rem;
+}
+
+.bxs-like:hover {
+  cursor: pointer;
+  color: blue;
+}
+
+/* Footer */
+
+.b-line-divider {
+  height: 3rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  border: solid rgba(0, 0, 0, 0.15);
+  border-width: 1px 0;
+  box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1),
+    inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15);
+}
+.b-line-divider2 {
+  height: 7rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  border: solid rgba(0, 0, 0, 0.15);
+  border-width: 1px 0;
+  box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1),
+    inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15);
+  text-align: center;
+  vertical-align: bottom;
+}
+
+.coment-input {
+  resize: none;
+}
+
+.comment-area {
+  border: 1px solid var(--background-color-gray);
+  color: var(--background-color-gray);
+  resize: none;
+}
+
+.comment-area:focus {
+  color: var(--text-dark-color);
+}
+
+.comment-btn {
+  background-color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  color: var(--text-light-color);
+  border-radius: 5px;
+}
+
+.comment-btn:hover {
+  background-color: var(--primary-color-dark);
+}
+
+.icon-comment {
+  color: var(--primary-color-light);
+  cursor: pointer;
+}
+
+.icon-comment:hover {
+  color: var(--primary-color);
+}
+
+.thumbnail {
+  position: relative;
+}
+.caption {
+  position: absolute;
+  top: 45%;
+  left: 0;
+  width: 100%;
+}
+
+.shared-comments-container {
+  background-color: var(--card-background-color);
+}
+
+.comment-user {
+  color: var(--comment-user-text-color);
+  font-size: 18px;
+}
+
+.comment-user-sub {
+  color: var(--secondary-color);
+  font-size: 12px;
+}
+
+.icon-user-comment {
+  color: var(--primary-color-light);
+  cursor: pointer;
+}

@@ -1,0 +1,253 @@
+@import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Montserrat:wght@100;300;500;700&display=swap");
+
+:root {
+  --primary-color: #c10000;
+  --primary-color-dark: #940808;
+  --primary-color-light: #ff9292;
+  --secondary-color: #4d4d4d;
+  --background-color-gray: #dbdbdb;
+  --background-color-light: #f7f7f7;
+  --background-color-dark: #202529;
+  --text-light-color: #fafbf3;
+  --text-dark-color: #000000;
+  --start-color: #f7a41b;
+  --card-background-color: #f5f5f5;
+  --pusblisher-background-color: #cbbfb5;
+  --comment-user-text-color: #36648B;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  background-color: var(--background-color-gray);
+}
+
+div.line {
+  height: 1px;
+  width: 90%;
+  margin: 0 auto;
+  border: 0;
+  border-top: 1px dashed #ccc;
+}
+.logo-lg-h {
+  height: 100%;
+  width: 150px;
+  cursor: pointer;
+}
+
+.logo-sm-h {
+  height: 100%;
+  width: 52px;
+  cursor: pointer;
+}
+.logo-lg-f {
+  height: 50%;
+}
+
+.nav-link-edit:hover,
+.nav-link-edit:visited:hover {
+  background: var(--primary-color);
+  color: var(--text-light-color);
+}
+
+.nav-btns {
+  background-color: var(--background-color-gray);
+  height: 50px;
+  width: 100px;
+}
+
+.nav-btns:hover {
+  background-color: var(--primary-color);
+  color: var(--text-light-color);
+}
+
+.cl-title {
+  color: var(--text-dark-color);
+}
+
+.card {
+  background-color: var(--card-background-color);
+  border-radius: 1rem;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.btn-outline-secondary {
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.btn-outline-secondary:hover {
+  background-color: var(--primary-color);
+  color: var(--text-light-color);
+}
+
+img {
+  height: 10rem;
+}
+
+.fa-star {
+  color: var(--start-color);
+}
+
+.search-categories {
+  background-color: var(--background-color-light);
+}
+
+.search-icon {
+  background-color: var(--primary-color-light);
+  color: var(--text-light-color);
+}
+
+.search-input {
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+}
+
+.category-item {
+  background-color: var(--background-color-gray);
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s;
+}
+
+.category-item:hover {
+  background-color: var(--background-color-gray);
+  transform: scale(1.05);
+}
+
+.category-btn {
+  background-color: var(--primary-color);
+  color: var(--text-light-color);
+}
+
+.category-btn:hover {
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+}
+/* CarList */
+
+.custom-card {
+  background-color: whitesmoke;
+  border-radius: 1rem;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+img {
+  height: 10rem;
+}
+
+.fa-star {
+  color: #f7a41b;
+}
+
+@media (min-width: 280px) and (max-width: 1439px) {
+  .row {
+    margin-left: 0.2rem;
+  }
+}
+
+/* Footer */
+.footer-bg {
+  background-color: var(--background-color-dark);
+}
+.btn-footer-s {
+  background-color: var(--primary-color);
+  color: var(--text-light-color);
+}
+
+.btn-footer-s:hover {
+  background-color: var(--text-light-color);
+  color: var(--primary-color);
+}
+
+.b-line-divider {
+  height: 3rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  border: solid rgba(0, 0, 0, 0.15);
+  border-width: 1px 0;
+  box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1),
+    inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15);
+}
+
+.b-line-divider2 {
+  height: 7rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  border: solid rgba(0, 0, 0, 0.15);
+  border-width: 1px 0;
+  box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1),
+    inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15);
+  text-align: center;
+  vertical-align: bottom;
+}
+
+.b-line-divider {
+  height: 3rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  border: solid rgba(0, 0, 0, 0.15);
+  border-width: 1px 0;
+  box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1),
+    inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15);
+}
+
+.b-line-divider2 {
+  height: 7rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  border: solid rgba(0, 0, 0, 0.15);
+  border-width: 1px 0;
+  box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1),
+    inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15);
+  text-align: center;
+  vertical-align: bottom;
+}
+
+/* Modal */
+.modal-background {
+  background-color: var(--card-background-color);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+label,
+input[type="submit"] {
+  display: inline-flexbox;
+  margin-top: 1em;
+}
+.link-custom {
+  color: var(--primary-color);
+}
+.color-text {
+  color: var(--text-dark-color);
+}
+
+.btn-close {
+  top: 20px;
+  right: 20px;
+}
+
+.btn-signup {
+  background-color: var(--primary-color);
+  color: var(--background-color-light);
+}
+.btn-add {
+  text-decoration: none;
+  background-color: var(--primary-color);
+  color: var(--background-color-light);
+}
+
+.btn-signup:hover {
+  background-color: var(--background-color-light);
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+/*--- About-us----*/
+.img-circular {
+  border-radius: 50%;
+  border: 4px solid var(--primary-color);
+  width: 70%;
+}

@@ -31,16 +31,21 @@ div.line {
   border: 0;
   border-top: 1px dashed #ccc;
 }
-.logo-lg {
+
+.logo-lg-h {
   height: 100%;
   width: 150px;
   cursor: pointer;
 }
 
-.logo-sm {
+.logo-sm-h {
   height: 100%;
   width: 52px;
   cursor: pointer;
+}
+
+.logo-lg-f{
+  height: 50%;
 }
 
 .nav-link-edit:hover, .nav-link-edit:visited:hover {
@@ -49,8 +54,14 @@ div.line {
 }
 
 .nav-btns {
+  background-color: var(--secondary-color);
   height: 50px;
   width: 100px;
+}
+
+.nav-btns:hover {
+  background-color: var(--primary-color);
+  color: var(--text-light-color);
 }
 
 .cl-title {
@@ -140,6 +151,10 @@ img {
 }
 
 /* Footer */
+
+.footer-bg{
+  background-color: var(--secondary-color);
+}
 
 .b-line-divider {
   height: 3rem;

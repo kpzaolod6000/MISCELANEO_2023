@@ -1,0 +1,31 @@
+:root{
+    --primary-color: #C10000;
+    --text-dark-color: #000000;
+    --background-color: #a5a0a0;
+    --background-color-light: #F7F7F7;
+}
+.form-contact{
+
+}
+.form-contact textarea:hover, input:hover{
+    background-color: var(--background-color);
+    transition: .3s;
+}
+.form-contact input, textarea{
+    border-radius: 5px;
+    padding: 5px;
+}
+.btn-send:hover{
+    background-color:var(--primary-color);
+    color:#F7F7F7
+}
+
+input::placeholder, textarea::placeholder{
+    color: #000000;
+}
+.bg-img{
+
+    background-repeat: no-repeat;
+    background-color: var(--background-color-light);
+    background-size: cover;
+}
